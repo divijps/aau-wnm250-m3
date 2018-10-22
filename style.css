@@ -1,48 +1,92 @@
-.rotation {
-	-webkit-animation-name: loadup;
-	-webkit-animation-duration: 5s;
+.translate {
+    width: 300px;
+    height: 300px;
+    background-image: url(1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    -webkit-animation-name: mover;
+    -webkit-animation-duration: 4s; 
+    -webkit-animation-iteration-count: infinite; 
+    animation-name: mover;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes mover {
+    from {transform: translate(400px, 100px);}
+    to {transform: translate(700px, 150px);}
 }
 
-.rotation img {
-	width: 30%;
-	position: relative;
-	-webkit-animation: mymove 5s infinite;
-	animation: mymove 5s infinite;
+
+
+
+.skewy {
+    width: 400px;
+    height: 100px;
+
+    background-image: url(2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    -webkit-animation-name: skewer;
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count: infinite; 
+    animation-name: skewer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes skewer {
+    from {transform: skewY(0deg);}
+    to {transform: skewY(-40deg);}
 }
 
-@keyframes loadup{
-	0% {opacity: 0; padding: 0px 0px 50px 0px;}
-	25% {opacity: 2.5;}
-	50% {opacity: 5.0;}
-	75% {opacity: 7.5;}
-	100% {opacity: 1; padding: 0px 0px 10px 0px;}
+
+.rotatex {
+    width: 400px;
+    height: 150px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background-image: url(3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    -webkit-animation-name: transformer; 
+    -webkit-animation-duration: 2s; 
+    -webkit-animation-iteration-count: infinite;
+    animation-name: transformer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
+@keyframes transformer {
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(360deg);}
+}
+
 
 .columns {
-
-	-webkit-column-count: 2;
+    -webkit-column-count: 2;
     -webkit-column-gap: 40px;
     -webkit-column-rule-style: solid;
     -webkit-column-rule-width: 2px;
+    -webkit-column-rule-color: red;
     
     -moz-column-count: 2;
     -moz-column-gap: 40px;
     -moz-column-rule-style: solid;
     -moz-column-rule-width: 2px;
+    -webkit-column-rule-color: red;
     
     column-count: 2;
     column-gap: 40px;
     column-rule-style: solid;
     column-rule-width: 2px;
-
-    background: -webkit-radial-gradient(red, blue);
-    background: -moz-radial-gradient(red, blue); 
-    background: radial-gradient(red, blue);
-
-
-}
-
-.columns p {
-	margin: 20px 20px 20px 20px;
-color: white;
+    column-rule-color: red;
+    
+    background: red; 
+    background: -webkit-radial-gradient(rgba(255,0,0,0.2), rgba(0,0,255,0.2));
+    background: -moz-radial-gradient(rgba(255,0,0,0.2), rgba(0,0,255,0.2));
+    background: radial-gradient(rgba(255,0,0,0.2), rgba(0,0,255,0.2));
 }
