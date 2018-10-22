@@ -1,0 +1,48 @@
+.rotation {
+	-webkit-animation-name: loadup;
+	-webkit-animation-duration: 5s;
+}
+
+.rotation img {
+	width: 30%;
+	position: relative;
+	-webkit-animation: mymove 5s infinite;
+	animation: mymove 5s infinite;
+}
+
+@keyframes loadup{
+	0% {opacity: 0; padding: 0px 0px 50px 0px;}
+	25% {opacity: 2.5;}
+	50% {opacity: 5.0;}
+	75% {opacity: 7.5;}
+	100% {opacity: 1; padding: 0px 0px 10px 0px;}
+}
+
+.columns {
+
+	-webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 2px;
+    
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 2px;
+    
+    column-count: 2;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 2px;
+
+    background: -webkit-radial-gradient(red, blue);
+    background: -moz-radial-gradient(red, blue); 
+    background: radial-gradient(red, blue);
+
+
+}
+
+.columns p {
+	margin: 20px 20px 20px 20px;
+color: white;
+}
